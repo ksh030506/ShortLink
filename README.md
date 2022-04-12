@@ -29,3 +29,5 @@ postgres
 ```
 
 루시드 차트 URL : https://lucid.app/lucidchart/8794c134-65cf-43c1-ad3b-bd5ca53e2ef2/edit?invitationId=inv_6309e4d8-4018-40ad-a805-84b5ea7d8971
+
+swagger-ui : http://localhost:8082/swagger-ui.html
