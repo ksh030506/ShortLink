@@ -1,4 +1,4 @@
-package kr.co.ab180.response.domain;
+package kr.co.ab180.domain;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

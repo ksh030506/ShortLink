@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface LinksRepository extends JpaRepository<Links, Long> {
 
     Optional<Links> findByOriginalLink(String url);
-
+    Optional<Links> findByShortLink(String shortId);
 }

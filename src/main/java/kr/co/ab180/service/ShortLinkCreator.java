@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class ShortLinkCreator {
 
     public String executor() {
-        return RandomStringUtils.randomAlphabetic(5);
+        return RandomStringUtils.randomAlphanumeric(8) + System.currentTimeMillis();
     }
 
 }

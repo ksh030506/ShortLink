@@ -2,9 +2,9 @@ package kr.co.ab180.exception.datanotfound;
 
 public enum DataNotFoundType {
 
-    DEFAULT("필수")
+    DEFAULT("필수"),
+    NOT_FOUND_LINK("해당하는 Link를 찾을 수 없습니다.")
     ;
-
 
     private final String message;
 
@@ -12,11 +12,7 @@ public enum DataNotFoundType {
         this.message = message;
     }
 
-    public String getMessage() {
-        return message.concat(" 데이터가 존재하지 않습니다.");
-    }
-
-    public String message(){
+    public String getMessage(){
         return message;
     }
 }
