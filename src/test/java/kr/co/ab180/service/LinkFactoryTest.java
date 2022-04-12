@@ -31,13 +31,6 @@ class LinkFactoryTest {
     ShortUrlRequest request;
 
     @Test
-    void create_short_link() {
-        sut.create(any());
-
-        verify(shortLinkCreator).executor();
-    }
-
-    @Test
     void save_short_link_and_original_link() {
         Links links = Links.of(LINK_ID_1, SHORT_LINK, ORIGINAL_LINK);
 
