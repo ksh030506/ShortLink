@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.5.3"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id "io.freefair.lombok" version "6.0.0-m2"
+}
+
+group 'kr.co.ab180'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // *** Spring Starter *** //
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //data JPA
+    implementation 'org.springframework.boot:spring-boot-starter-validation' //validation
+    implementation 'org.springframework.boot:spring-boot-starter-web' //starter web
+    implementation 'org.springframework.boot:spring-boot-configuration-processor' // processor
+
+    // *** h2 *** //
+    implementation 'org.postgresql:postgresql:42.2.24.jre7'
+
+    // *** dev tool and test *** //
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.assertj:assertj-core:3.21.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.0.0'
+
+    // *** swagger *** //
+    implementation 'io.springfox:springfox-swagger2:2.9.1'
+    implementation 'io.springfox:springfox-swagger-ui:2.9.1'
+    implementation 'io.swagger:swagger-annotations:1.6.2'
+    implementation 'io.swagger:swagger-models:1.5.22'
+
+    // *** gson *** //
+    implementation 'com.google.code.gson:gson'
+
+    //*** mapper *** //
+    implementation 'org.modelmapper:modelmapper:2.3.8'
+}
+
+test {
+    useJUnitPlatform()
+}
