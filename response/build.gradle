@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot"
+    id "io.spring.dependency-management"
+    id "io.freefair.lombok"
+}
+
+group 'kr.co.ab180'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+test {
+    useJUnitPlatform()
+}

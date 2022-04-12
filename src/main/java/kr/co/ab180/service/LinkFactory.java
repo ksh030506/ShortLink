@@ -5,11 +5,9 @@ import kr.co.ab180.message.ShortUrlRequest;
 import kr.co.ab180.message.ShortUrlResponse;
 import kr.co.ab180.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

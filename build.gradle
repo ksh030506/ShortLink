@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(":response")
 
     // *** Spring Starter *** //
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //data JPA

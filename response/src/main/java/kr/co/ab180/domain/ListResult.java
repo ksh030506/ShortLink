@@ -1,4 +1,4 @@
-package kr.co.ab180.response.domain;
+package kr.co.ab180.domain;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -6,7 +6,6 @@ import kr.co.ab180.exception.datanotfound.DataNotFoundType;
 import kr.co.ab180.message.FindByShortIdResponse;
 import kr.co.ab180.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 @Service

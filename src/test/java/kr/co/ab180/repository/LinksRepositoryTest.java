@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class LinksRepositoryTest {
@@ -20,7 +18,7 @@ public class LinksRepositoryTest {
     @Autowired
     LinksRepository sut;
 
-    @Test
+    @Test // TODO
     void save_short_link_duplicated() {
         Links links_1 = Links.of(LINK_ID_1, SHORT_LINK, ORIGINAL_LINK);
         sut.save(links_1);

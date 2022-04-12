@@ -1,19 +1,18 @@
 package kr.co.ab180.controller;
 
+import kr.co.ab180.domain.SingleResult;
 import kr.co.ab180.message.FindByShortIdResponse;
 import kr.co.ab180.message.ShortUrlRequest;
 import kr.co.ab180.message.ShortUrlResponse;
-import kr.co.ab180.response.domain.SingleResult;
-import kr.co.ab180.response.service.ResponseService;
 import kr.co.ab180.service.LinkFactory;
 import kr.co.ab180.service.LinkFinder;
 import kr.co.ab180.service.LinkRedirect;
+import kr.co.ab180.service.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor

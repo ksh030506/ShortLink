@@ -1,6 +1,6 @@
 package kr.co.ab180.message;
 
-import lombok.*;
+import lombok.Value;
 
 import java.time.LocalDateTime;
 
