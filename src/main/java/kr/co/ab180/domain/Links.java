@@ -17,9 +17,10 @@ public class Links extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long linksIdx;
 
-    @Column(unique = true)
+    @Column(nullable = false, unique = true)
     private String shortLink;
 
+    @Column(nullable = false)
     private String originalLink;
 
     public static Links of(Long id, String shortLink, String originalLink) {

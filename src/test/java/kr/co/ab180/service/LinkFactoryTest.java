@@ -19,7 +19,6 @@ import static org.mockito.Mockito.verify;
 class LinkFactoryTest {
 
     final Long LINK_ID_1 = 1L;
-    final Long LINK_ID_2 = 2L;
     final String SHORT_LINK = "test1";
     final String ORIGINAL_LINK = "https://naver.com";
 
@@ -55,27 +54,8 @@ class LinkFactoryTest {
     }
 
     @Test // TODO
-    void save_short_link_duplicated() {
-        Links links_1 = Links.of(LINK_ID_1, SHORT_LINK, ORIGINAL_LINK);
-        Links links_2 = Links.of(LINK_ID_2, SHORT_LINK, ORIGINAL_LINK);
-
-        given(shortLinkCreator.executor()).willReturn(SHORT_LINK);
-        given(request.toEntity(SHORT_LINK)).willReturn(links_1);
-        given(linksRepository.save(links_1)).willReturn(links_1);
-
-        ShortUrlResponse shortUrlResponse = sut.create(request);
-
-        given(shortLinkCreator.executor()).willReturn(SHORT_LINK);
-        given(request.toEntity(SHORT_LINK)).willReturn(links_2);
-        given(linksRepository.save(links_2)).willReturn(links_2);
-
-        sut.create(request);
-        assertThatThrownBy(() -> linksRepository.save(links_2));
-    }
-
-    @Test // TODO
     void duplicated_original_link() {
-
+        Links links = Links.of(LINK_ID_1, SHORT_LINK, ORIGINAL_LINK);
 
 
     }
