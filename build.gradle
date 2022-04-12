@@ -42,6 +42,8 @@ dependencies {
 
     //*** mapper *** //
     implementation 'org.modelmapper:modelmapper:2.3.8'
+
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 test {

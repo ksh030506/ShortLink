@@ -1,7 +1,7 @@
 package kr.co.ab180.response.service;
 
-import kr.co.ab180.response.domain.ListResult;
 import kr.co.ab180.response.domain.CommonResult;
+import kr.co.ab180.response.domain.ListResult;
 import kr.co.ab180.response.domain.SingleResult;
 import lombok.Getter;
 import org.springframework.stereotype.Service;
