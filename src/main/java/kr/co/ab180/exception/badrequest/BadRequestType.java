@@ -8,7 +8,6 @@ public enum BadRequestType {
     private final String message;
 
     BadRequestType(String message) {
-
         this.message = message;
     }
 

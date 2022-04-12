@@ -1,8 +1,7 @@
 package kr.co.ab180.service;
 
 import kr.co.ab180.domain.Links;
-import kr.co.ab180.message.ShortUrlRequest;
-import kr.co.ab180.message.ShortUrlResponse;
+import kr.co.ab180.exception.datanotfound.DataNotFoundException;
 import kr.co.ab180.repository.LinksRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,46 +9,45 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import javax.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-class LinkFactoryTest {
+class LinkRedirectTest {
 
     final Long LINK_ID_1 = 1L;
     final String SHORT_LINK = "test1";
     final String ORIGINAL_LINK = "https://naver.com";
 
     @InjectMocks
-    LinkFactory sut;
+    LinkRedirect sut;
 
-    @Mock
-    ShortLinkCreator shortLinkCreator;
     @Mock
     LinksRepository linksRepository;
     @Mock
-    ShortUrlRequest request;
+    HttpServletResponse response;
 
     @Test
-    void create_short_link() {
-        sut.create(any());
-
-        verify(shortLinkCreator).executor();
+    void not_find_link() {
+        given(linksRepository.findByShortLink(SHORT_LINK)).willThrow(DataNotFoundException.class);
+        assertThatThrownBy(() -> sut.execute(response, SHORT_LINK)).isInstanceOf(DataNotFoundException.class);
     }
 
     @Test
-    void save_short_link_and_original_link() {
+    void send_redirect() throws IOException {
         Links links = Links.of(LINK_ID_1, SHORT_LINK, ORIGINAL_LINK);
+        given(linksRepository.findByShortLink(SHORT_LINK)).willReturn(Optional.of(links));
 
-        given(shortLinkCreator.executor()).willReturn("test1");
-        given(request.toEntity("test1")).willReturn(links);
-        given(linksRepository.save(links)).willReturn(links);
+        sut.execute(response, SHORT_LINK);
 
-        sut.create(request);
-
-        verify(shortLinkCreator).executor();
-        verify(linksRepository).save(links);
+        verify(response).sendRedirect(any());
     }
 }

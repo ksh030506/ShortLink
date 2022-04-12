@@ -6,11 +6,12 @@ import kr.co.ab180.message.ShortUrlResponse;
 import kr.co.ab180.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Optional;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class LinkFactory {
 
@@ -20,13 +21,6 @@ public class LinkFactory {
     @Transactional
     public ShortUrlResponse create(ShortUrlRequest request) {
         String shortId = shortLinkCreator.executor();
-        Optional<Links> findByLink = linksRepository.findByOriginalLink(request.getUrl());
-
-        if (findByLink.isPresent()) {
-            findByLink.get().updateShortLink(shortId);
-            return ShortUrlResponse.of(request.getUrl(), shortId, findByLink.get().getCreatedDate());
-        }
-
         Links links = linksRepository.save(request.toEntity(shortId));
 
         return ShortUrlResponse.of(request.getUrl(), shortId, links.getCreatedDate());
