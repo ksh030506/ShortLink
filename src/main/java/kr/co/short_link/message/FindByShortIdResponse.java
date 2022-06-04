@@ -1,4 +1,4 @@
-package kr.co.ab180.message;
+package kr.co.short_link.message;
 
 import lombok.Value;
 

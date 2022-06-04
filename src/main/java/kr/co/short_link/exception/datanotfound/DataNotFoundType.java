@@ -1,4 +1,4 @@
-package kr.co.ab180.exception.datanotfound;
+package kr.co.short_link.exception.datanotfound;
 
 public enum DataNotFoundType {
 

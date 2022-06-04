@@ -1,4 +1,4 @@
-package kr.co.ab180.domain;
+package kr.co.short_link.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

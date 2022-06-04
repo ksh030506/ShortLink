@@ -1,4 +1,4 @@
-package kr.co.ab180;
+package kr.co.short_link;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

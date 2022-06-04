@@ -1,4 +1,4 @@
-package kr.co.ab180.config;
+package kr.co.short_link.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

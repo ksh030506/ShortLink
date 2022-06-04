@@ -1,6 +1,6 @@
-package kr.co.ab180.message;
+package kr.co.short_link.message;
 
-import kr.co.ab180.domain.Links;
+import kr.co.short_link.domain.Links;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

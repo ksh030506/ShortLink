@@ -1,8 +1,8 @@
-package kr.co.ab180.service;
+package kr.co.short_link.service;
 
-import kr.co.ab180.exception.datanotfound.DataNotFoundException;
-import kr.co.ab180.exception.datanotfound.DataNotFoundType;
-import kr.co.ab180.repository.LinksRepository;
+import kr.co.short_link.exception.datanotfound.DataNotFoundException;
+import kr.co.short_link.exception.datanotfound.DataNotFoundType;
+import kr.co.short_link.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

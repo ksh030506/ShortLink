@@ -1,9 +1,9 @@
-package kr.co.ab180.exception;
+package kr.co.short_link.exception;
 
-import kr.co.ab180.domain.CommonResult;
-import kr.co.ab180.exception.badrequest.BadRequestException;
-import kr.co.ab180.exception.datanotfound.DataNotFoundException;
-import kr.co.ab180.service.ResponseService;
+import kr.co.short_link.domain.CommonResult;
+import kr.co.short_link.exception.badrequest.BadRequestException;
+import kr.co.short_link.exception.datanotfound.DataNotFoundException;
+import kr.co.short_link.service.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

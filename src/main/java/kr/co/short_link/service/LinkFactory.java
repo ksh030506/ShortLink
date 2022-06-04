@@ -1,9 +1,9 @@
-package kr.co.ab180.service;
+package kr.co.short_link.service;
 
-import kr.co.ab180.domain.Links;
-import kr.co.ab180.message.ShortUrlRequest;
-import kr.co.ab180.message.ShortUrlResponse;
-import kr.co.ab180.repository.LinksRepository;
+import kr.co.short_link.domain.Links;
+import kr.co.short_link.message.ShortUrlRequest;
+import kr.co.short_link.message.ShortUrlResponse;
+import kr.co.short_link.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

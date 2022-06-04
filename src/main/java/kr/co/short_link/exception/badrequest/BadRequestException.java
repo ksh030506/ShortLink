@@ -1,4 +1,4 @@
-package kr.co.ab180.exception.badrequest;
+package kr.co.short_link.exception.badrequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

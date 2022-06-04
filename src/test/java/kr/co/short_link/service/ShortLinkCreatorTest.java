@@ -1,4 +1,4 @@
-package kr.co.ab180.service;
+package kr.co.short_link.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

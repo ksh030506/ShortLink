@@ -1,13 +1,13 @@
-package kr.co.ab180.controller;
+package kr.co.short_link.controller;
 
-import kr.co.ab180.domain.SingleResult;
-import kr.co.ab180.message.FindByShortIdResponse;
-import kr.co.ab180.message.ShortUrlRequest;
-import kr.co.ab180.message.ShortUrlResponse;
-import kr.co.ab180.service.LinkFactory;
-import kr.co.ab180.service.LinkFinder;
-import kr.co.ab180.service.LinkRedirect;
-import kr.co.ab180.service.ResponseService;
+import kr.co.short_link.domain.SingleResult;
+import kr.co.short_link.message.FindByShortIdResponse;
+import kr.co.short_link.message.ShortUrlRequest;
+import kr.co.short_link.message.ShortUrlResponse;
+import kr.co.short_link.service.LinkFactory;
+import kr.co.short_link.service.LinkFinder;
+import kr.co.short_link.service.LinkRedirect;
+import kr.co.short_link.service.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

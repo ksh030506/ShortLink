@@ -1,10 +1,10 @@
-package kr.co.ab180.service;
+package kr.co.short_link.service;
 
-import kr.co.ab180.domain.Links;
-import kr.co.ab180.exception.datanotfound.DataNotFoundException;
-import kr.co.ab180.exception.datanotfound.DataNotFoundType;
-import kr.co.ab180.message.FindByShortIdResponse;
-import kr.co.ab180.repository.LinksRepository;
+import kr.co.short_link.domain.Links;
+import kr.co.short_link.exception.datanotfound.DataNotFoundException;
+import kr.co.short_link.exception.datanotfound.DataNotFoundType;
+import kr.co.short_link.message.FindByShortIdResponse;
+import kr.co.short_link.repository.LinksRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

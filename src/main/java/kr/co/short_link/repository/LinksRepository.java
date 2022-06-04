@@ -1,6 +1,6 @@
-package kr.co.ab180.repository;
+package kr.co.short_link.repository;
 
-import kr.co.ab180.domain.Links;
+import kr.co.short_link.domain.Links;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
