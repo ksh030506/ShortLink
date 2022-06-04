@@ -1,6 +1,6 @@
-# ab180 recruit project
+# K8s Practice
 다음을 목적으로 생성되었습니다.
-- ab180 코딩 테스트 입니다.
+- K8s를 연습하고 DevOps 파이프라인을 연습하기 위해 생성되었습니다.
 
 아래를 포함합니다.
 - Create Short Link
