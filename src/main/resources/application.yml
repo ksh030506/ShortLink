@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5422/ab180-recruit
+    url: jdbc:postgresql://localhost:5422/short-link
     username: admin
     password: 1234
 

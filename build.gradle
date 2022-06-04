@@ -5,7 +5,7 @@ plugins {
     id "io.freefair.lombok" version "6.0.0-m2"
 }
 
-group 'kr.co.ab180'
+group 'kr.co.short_link'
 version '1.0-SNAPSHOT'
 
 repositories {
