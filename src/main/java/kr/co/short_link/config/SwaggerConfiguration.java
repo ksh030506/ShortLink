@@ -44,13 +44,13 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
     @Bean
     public Docket apiTest() {
         version = "v1";
-        title = "ab180 API" + version;
+        title = "ShortLink API" + version;
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
                 .groupName(version)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("kr.co.ab180"))
+                .apis(RequestHandlerSelectors.basePackage("kr.co.short_link"))
                 .paths(PathSelectors.ant("/**"))
                 .build()
                 .apiInfo(apiInfo(title, version))
